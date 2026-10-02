@@ -1,0 +1,707 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #fffaf8;
+    color: #3d3030;
+}
+
+
+/* =====================================
+   ENCABEZADO
+===================================== */
+
+header {
+    width: 100%;
+    padding: 22px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #fffaf8;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #8d5c65;
+}
+
+
+.logo span {
+    color: #b99179;
+}
+
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #4c3a3a;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #a66b76;
+}
+
+
+/* =====================================
+   PORTADA
+===================================== */
+
+.hero {
+    min-height: 90vh;
+
+    background:
+
+        linear-gradient(
+            rgba(65, 38, 45, 0.45),
+            rgba(65, 38, 45, 0.45)
+        ),
+
+        url("imagenes/portada.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+.hero-contenido {
+    max-width: 850px;
+    padding: 30px;
+}
+
+
+.pequeno {
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 {
+    font-size: 70px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+    color: #f3d4c9;
+}
+
+
+.descripcion {
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    margin-bottom: 35px;
+}
+
+
+.boton {
+    display: inline-block;
+
+    padding: 16px 35px;
+
+    border: 1px solid white;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+
+.boton:hover {
+    background: white;
+
+    color: #8d5c65;
+
+    transform: translateY(-4px);
+}
+
+
+/* =====================================
+   BIENVENIDA
+===================================== */
+
+.bienvenida {
+    padding: 100px 10%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 80px;
+}
+
+
+.texto {
+    max-width: 600px;
+}
+
+
+.titulo-pequeno {
+    font-family: Arial, sans-serif;
+
+    color: #a66b76;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+
+.bienvenida h2,
+.catalogo h2,
+.aromas h2,
+.video-seccion h2,
+.contacto h2 {
+
+    font-size: 42px;
+
+    color: #493838;
+
+    margin-bottom: 25px;
+
+    line-height: 1.2;
+}
+
+
+.bienvenida p:not(.titulo-pequeno) {
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.8;
+
+    color: #695959;
+
+    margin-bottom: 18px;
+}
+
+
+/* CÍRCULO DECORATIVO */
+
+.decoracion {
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7c5c2,
+            #b98d91
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+.circulo {
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    letter-spacing: 6px;
+
+    font-size: 20px;
+}
+
+
+/* =====================================
+   CATÁLOGO
+===================================== */
+
+.catalogo {
+    padding: 100px 8%;
+
+    background: #f5e9e6;
+
+    text-align: center;
+}
+
+
+.subtitulo {
+    font-family: Arial, sans-serif;
+
+    color: #765f5f;
+
+    margin-bottom: 50px;
+}
+
+
+.productos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+.producto {
+    background: #fff;
+
+    transition: 0.4s;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+}
+
+
+.producto:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.14);
+}
+
+
+.imagen-producto {
+    width: 100%;
+
+    height: 300px;
+
+    overflow: hidden;
+}
+
+
+.imagen-producto img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+
+.producto:hover img {
+    transform: scale(1.08);
+}
+
+
+.producto-info {
+    padding: 25px;
+}
+
+
+.producto-info h3 {
+    font-size: 25px;
+
+    color: #76505a;
+
+    margin-bottom: 8px;
+}
+
+
+.tipo {
+    color: #b58a76;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+
+.producto-info p:last-child {
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #716464;
+}
+
+
+/* =====================================
+   TIPOS DE AROMAS
+===================================== */
+
+.aromas {
+    padding: 100px 8%;
+
+    text-align: center;
+}
+
+
+.aroma-contenedor {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: 50px auto 0;
+}
+
+
+.aroma {
+    padding: 35px 20px;
+
+    border: 1px solid #ead8d5;
+
+    transition: 0.3s;
+}
+
+
+.aroma:hover {
+    background: #f5e9e6;
+
+    transform: translateY(-7px);
+}
+
+
+.icono {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+
+.aroma h3 {
+    color: #76505a;
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+
+.aroma p {
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #716464;
+}
+
+
+/* =====================================
+   VIDEO
+===================================== */
+
+.video-seccion {
+    padding: 100px 8%;
+
+    background: #3e3032;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+.video-seccion h2 {
+    color: white;
+}
+
+
+.video {
+    max-width: 900px;
+
+    margin: 40px auto 0;
+}
+
+
+.video video {
+    width: 100%;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.3);
+}
+
+
+/* =====================================
+   CONTACTO
+===================================== */
+
+.contacto {
+    padding: 100px 8%;
+
+    text-align: center;
+
+    background: #fffaf8;
+}
+
+
+.contacto-contenido {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+.contacto h2 {
+    color: #493838;
+}
+
+
+.contacto-contenido > p:not(.titulo-pequeno) {
+    font-family: Arial, sans-serif;
+
+    line-height: 1.8;
+
+    color: #695959;
+
+    margin-bottom: 45px;
+}
+
+
+.datos {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 70px;
+
+    flex-wrap: wrap;
+}
+
+
+.datos strong {
+    color: #8d5c65;
+
+    font-family: Arial, sans-serif;
+}
+
+
+.datos p {
+    font-family: Arial, sans-serif;
+
+    margin-top: 8px;
+
+    color: #695959;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background: #2f2527;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+
+footer .logo {
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+
+footer p {
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.copyright {
+    margin-top: 20px;
+
+    opacity: 0.6;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .productos {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .aroma-contenedor {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .bienvenida {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    nav {
+        gap: 15px;
+    }
+
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+
+    .bienvenida h2,
+    .catalogo h2,
+    .aromas h2,
+    .video-seccion h2,
+    .contacto h2 {
+
+        font-size: 32px;
+    }
+
+
+    .decoracion {
+        width: 280px;
+
+        height: 280px;
+    }
+
+
+    .circulo {
+        width: 190px;
+
+        height: 190px;
+    }
+
+
+    .productos,
+    .aroma-contenedor {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .datos {
+        gap: 30px;
+
+        flex-direction: column;
+    }
+
+}
